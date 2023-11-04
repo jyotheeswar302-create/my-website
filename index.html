@@ -10,6 +10,7 @@
     <header>
         <h1>JobZone - Find Your Dream Job</h1>
     </header>
+	
     <div class="container">
         <section class="job-listings" id="jobListingsSection1">
            
@@ -17,21 +18,47 @@
         <section class="job-listings" id="jobListingsSection2">
             
         </section>
+
     </div>
+
+<!-- Add this section inside your <body> element -->
+<section class="scrolling-news">
+	<div class="news-heading">
+            <h2>Upcoming Jobs</h2>
+        </div>
+    <div class="news-content">
+	 
+        <ul class="news-list">
+            <li class="news-item">News 1: This is the first news item.</li>
+            <li class="news-item">News 2: This is the second news item.</li>
+            <li class="news-item">News 3: This is the third news item.</li>
+            <!-- Add more news items as needed -->
+        </ul>
+    </div>
+</section>
+
+
     <section class="contact-info">
-        <h2>Contact Information</h2>
-        <p>Address: 123 Job Street, Cityville</p>
-        <p>Phone: (123) 456-7890</p>
-        <p>Email: info@jobzone.com</p>
+        <div class="contact-details">
+            <h2>About</h2>
+            <p>Address: 274 Job Street, Chittoor</p>
+            <p>Email: jyotheeswar203@gmail.com</p>
+
+        </div>
+        <div class="email-alert">
+            <h2>Email Alert Subscription</h2>
+            <form id="emailAlertForm">
+                <label for="emailAlert">Enter your email address:</label>
+                <input type="email" id="emailAlert" required>
+                <input type="submit" value="Subscribe">
+            </form>
+        </div>
     </section>
-    <section class="email-alert">
-        <h2>Email Alert Subscription</h2>
-        <form id="emailAlertForm">
-            <label for="emailAlert">Enter your email address:</label>
-            <input type="email" id="emailAlert" required>
-            <input type="submit" value="Subscribe">
-        </form>
-    </section>
+
+    <footer>
+        <p>&copy; 2023 JobZone. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

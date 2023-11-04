@@ -1,6 +1,9 @@
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+	
+    background-color: #2F4F4F;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -31,6 +34,9 @@ header {
 }
 
 .contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -46,22 +52,11 @@ header {
     margin: 5px 0;
 }
 
-script {
-    align-self: center;
+.email-alert {
+    text-align: left;
 }
 
-.footer-email-alert {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: right;
-}
-
-.footer-email-alert form {
+.email-alert form {
     display: inline-block;
 }
 
@@ -69,7 +64,7 @@ script {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px 0;
-    background-color: #fff;
+    background-color: #E6E6FA;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
@@ -93,4 +88,106 @@ script {
 
 .job .apply-button:hover {
     background-color: #555;
+}
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+.blink {
+    animation: blink 1s infinite;
+    color: #ff0000; /* Add your desired color value here */
+}
+
+
+/* Add this to your existing CSS file or create a new one */
+.scrolling-news {
+    background-image: url('fad.jpg'); /* Add your background image path here */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #ffffff; /* Set the font color for better visibility */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    max-height: 400px; /* Adjust the maximum height as needed for 4 lines */
+    overflow: hidden;
+    width: 300px; /* Set the desired width */
+    position: relative; /* Add relative positioning */
+}
+
+.news-content {
+    overflow-y: hidden;
+    height: 100%;
+    position: relative; /* Add relative positioning */
+}
+
+.news-heading {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 10px; /* Add space below the heading */
+	position: relative; /* Add relative positioning */
+}
+
+.news-heading h2 {
+    font-size: 1.5em; /* Adjust the font size as needed */
+    margin-bottom: 10px; /* Add space below the heading */
+}
+
+.news-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    animation: scrollAnimation 5s linear infinite;
+    position: absolute; /* Add absolute positioning */
+    top: 50%; /* Align to the middle of the container */
+    left: 50%; /* Align to the center of the container */
+    transform: translate(-50%, -50%); /* Center the list */
+}
+
+.news-item {
+    white-space: nowrap;
+    margin-bottom: 10px; /* Adjust the margin as needed */
+    line-height: 1.5; /* Adjust the line height to control spacing between lines */
+    height: 25px; /* Adjust the height of each line */
+    overflow: hidden;
+    opacity: 0; /* Hide initially */
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    25% {
+        transform: translateY(-25%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-50%);
+        opacity: 1;
+    }
+    75% {
+        transform: translateY(-75%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
